@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+PortoFix: Plataforma de Diagnóstico e Manutenção Automotiva Online
 
-## Getting Started
+PortoFix é uma proposta de plataforma que utiliza inteligência artificial e automação para oferecer uma experiência únical no setor de reparação automotiva. O sistema permite que segurados da Porto Seguro Auto realizem diagnósticos de veículos, agendem serviços, comprem peças e efetuem pagamentos de forma totalmente digital.
 
-First, run the development server:
+OBJETIVOS
+- Fornecer diagnóstico automatizado e preciso do veículo.
+- Facilitar o agendamento online de serviços de reparo.
+- Permitir a compra de peças automotivas de forma simples e segura.
+- Oferecer um sistema de pagamento integrado e seguro.
+- Garantir autenticação de usuários segura e confiável.
+- Proporcionar uma interface de usuário otimizada e responsiva.
+- Coletar feedbacks para aprimoramento contínuo do sistema.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+FUNCIONALIDADES
+- Diagnóstico Inteligente: Chatbot interativo que coleta informações sobre o veículo e usa IA para sugerir diagnósticos.
+- Agendamento Online: Permite que os clientes escolham data e horário para serviços nas oficinas credenciadas.
+- E-commerce de Peças: Catálogo de peças automotivas, permitindo a compra online com integração ao estoque.
+- Pagamento Seguro: Processamento de pagamento online para serviços e peças.
+- Autenticação de Usuários: Sistema de login, cadastro e recuperação de senha para segurados Porto.
+- Relatórios e Feedback: Resumo do serviço realizado e coleta de feedback para melhorias contínuas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+FRONT-END
+- React e Next.js
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+BACK-END
+- Java (Spring Boot): API RESTful e Maven
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+INTELIGÊNCIA ARTIFICIAL
+- Jupyter Notebooks: Desenvolvimento de lógica e ajuste do modelo de ML em Python
+- Chatbot: IBM Watson Assistant
 
-## Learn More
+BANCO DE DADOS
+- Oracle SQL Data Modeler: Implementação do banco de dados no backend Java
 
-To learn more about Next.js, take a look at the following resources:
+MODELO DE NEGÓCIOS
+- SCRUM
+- Pitch
+- Diagramas: UML, casos de uso, sequência, atividades, etc.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+LICENÇA
+Este projeto foi desenvolvido para fins acadêmicos e segue as diretrizes da instituição.
