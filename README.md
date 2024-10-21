@@ -40,5 +40,4 @@ Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP 
 - Pitch
 - Diagramas: UML, casos de uso, sequência, atividades, etc.
 
-**LICENÇA**
-Este projeto foi desenvolvido para fins acadêmicos e segue as diretrizes da instituição, não tendo
+**LICENÇA:** Este projeto foi desenvolvido para fins acadêmicos e segue as diretrizes da instituição, não tendo
