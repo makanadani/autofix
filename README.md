@@ -1,8 +1,5 @@
 **AutoFix**
 
-**AVISO LEGAL**
-Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP como parte de um exercício de aprendizado, sem qualquer relação com a Porto Seguro S.A. ou suas subsidiárias. O projeto não será utilizado pela Porto Seguro e não é afiliado à empresa de nenhuma forma.
-
 **AutoFix** é uma proposta de plataforma que utiliza inteligência artificial e automação para oferecer uma experiência únical no setor de reparação automotiva. O sistema permite que segurados da Porto Seguro Auto realizem diagnósticos de veículos, agendem serviços, comprem peças e efetuem pagamentos de forma totalmente digital.
 
 **OBJETIVOS**
@@ -38,3 +35,5 @@ Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP 
 - Metodologia Ágil: SCRUM
 
 **LICENÇA:** Este projeto foi desenvolvido para fins acadêmicos e segue as diretrizes da instituição.
+
+**AVISO LEGAL:** Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP como parte de um exercício de aprendizado, sem qualquer relação com a Porto Seguro S.A. ou suas subsidiárias. O projeto não será utilizado pela Porto Seguro e não é afiliado à empresa de nenhuma forma.
