@@ -1,4 +1,4 @@
-**AutoFix: Plataforma de Diagnóstico e Manutenção Automotiva Online**
+**AutoFix**
 
 **AVISO LEGAL**
 Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP como parte de um exercício de aprendizado, sem qualquer relação com a Porto Seguro S.A. ou suas subsidiárias. O projeto não será utilizado pela Porto Seguro e não é afiliado à empresa de nenhuma forma.
