@@ -1,9 +1,9 @@
-**PortoFix: Plataforma de Diagnóstico e Manutenção Automotiva Online**
+**AutoFix: Plataforma de Diagnóstico e Manutenção Automotiva Online**
 
 **AVISO LEGAL**
-Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP como parte de um exercício de aprendizado. Não tem qualquer relação com a Porto Seguro S.A. ou suas subsidiárias. O nome "PortoFix" é usado apenas para fins educacionais e de desenvolvimento, sem fins comerciais. O projeto não será utilizado pela Porto Seguro e não é afiliado à empresa de nenhuma forma.
+Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP como parte de um exercício de aprendizado, sem qualquer relação com a Porto Seguro S.A. ou suas subsidiárias. O projeto não será utilizado pela Porto Seguro e não é afiliado à empresa de nenhuma forma.
 
-**PortoFix** é uma proposta de plataforma que utiliza inteligência artificial e automação para oferecer uma experiência únical no setor de reparação automotiva. O sistema permite que segurados da Porto Seguro Auto realizem diagnósticos de veículos, agendem serviços, comprem peças e efetuem pagamentos de forma totalmente digital.
+**AutoFix** é uma proposta de plataforma que utiliza inteligência artificial e automação para oferecer uma experiência únical no setor de reparação automotiva. O sistema permite que segurados da Porto Seguro Auto realizem diagnósticos de veículos, agendem serviços, comprem peças e efetuem pagamentos de forma totalmente digital.
 
 **OBJETIVOS**
 - Fornecer diagnóstico automatizado e preciso do veículo.
@@ -17,7 +17,6 @@ Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP 
 **FUNCIONALIDADES**
 - Diagnóstico Inteligente: Chatbot interativo que coleta informações sobre o veículo e usa IA para sugerir diagnósticos.
 - Agendamento Online: Permite que os clientes escolham data e horário para serviços nas oficinas credenciadas.
-- E-commerce de Peças: Catálogo de peças automotivas, permitindo a compra online com integração ao estoque.
 - Pagamento Seguro: Processamento de pagamento online para serviços e peças.
 - Autenticação de Usuários: Sistema de login, cadastro e recuperação de senha para segurados Porto.
 - Relatórios e Feedback: Resumo do serviço realizado e coleta de feedback para melhorias contínuas.
@@ -36,8 +35,6 @@ Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP 
 - Oracle SQL Data Modeler: Implementação do banco de dados no backend Java
 
 **MODELO DE NEGÓCIOS**
-- SCRUM
-- Pitch
-- Diagramas: UML, casos de uso, sequência, atividades, etc.
+- Metodologia Ágil: SCRUM
 
-**LICENÇA:** Este projeto foi desenvolvido para fins acadêmicos e segue as diretrizes da instituição, não tendo
+**LICENÇA:** Este projeto foi desenvolvido para fins acadêmicos e segue as diretrizes da instituição.
