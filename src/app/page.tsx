@@ -1,101 +1,115 @@
-import Image from "next/image";
+"use client";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 
-export default function Home() {
+const schema = z.object({
+  nome_cliente: z.string().min(2, "Mínimo de 2 caracteres").nonempty("Nome obrigatório"),
+  nome_social_cliente: z.string().optional(),
+  cpf_cliente: z.string().length(11, "CPF deve ter 11 dígitos").nonempty("CPF obrigatório"),
+  cnh_cliente: z.string().length(9, "CNH deve ter 9 dígitos").nonempty("CNH obrigatória"),
+  dt_nasc_cliente: z.string().nonempty("Data de nascimento obrigatória"),
+  notificacoes_email: z.enum(["Sim", "Não"], { errorMap: () => ({ message: "Selecione Sim ou Não" }) }),
+  notificacoes_mensagem: z.enum(["Sim", "Não"], { errorMap: () => ({ message: "Selecione Sim ou Não" }) }),
+});
+
+export default function CadastroCliente() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(schema),
+  });
+
+  const onSubmit = async (data) => {
+    const response = await fetch('/api/clientes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      console.log("Cliente cadastrado com sucesso");
+    } else {
+      console.error("Erro ao cadastrar cliente");
+    }
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="container mx-auto p-8 bg-white rounded-lg shadow-lg">
+      <h1 className="text-3xl font-semibold text-portoBlue mb-6">Cadastro de Cliente</h1>
+      <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
+        
+        {/* Campo Nome */}
+        <div className="flex flex-col">
+          <label htmlFor="nome_cliente" className="text-portoGray font-medium">Nome</label>
+          <input type="text" id="nome_cliente" {...register("nome_cliente")} 
+          className="border border-gray-300 rounded-md p-2 text-lg focus:border-portoBlue focus:outline-none" />
+          {errors.nome_cliente && <span className="text-red-500">{errors.nome_cliente.message?.toString()}</span>}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Campo Nome Social */}
+        <div className="flex flex-col">
+          <label htmlFor="nome_social_cliente" className="text-portoGray font-medium">Nome Social</label>
+          <input type="text" id="nome_social_cliente" {...register("nome_social_cliente")}
+          className="border border-gray-300 rounded-md p-2 text-lg focus:border-portoBlue focus:outline-none" />
+          {errors.nome_social_cliente && <span className="text-red-500">{errors.nome_social_cliente.message?.toString()}</span>}
+        </div>
+
+        {/* Campo CPF */}
+        <div className="flex flex-col">
+          <label htmlFor="cpf_cliente" className="text-portoGray font-medium">CPF</label>
+          <input type="text" id="cpf_cliente" {...register("cpf_cliente")}
+          className="border border-gray-300 rounded-md p-2 text-lg focus:border-portoBlue focus:outline-none" />
+          {errors.cpf_cliente && <span className="text-red-500">{errors.cpf_cliente.message?.toString()}</span>}
+        </div>
+
+        {/* Campo CNH */}
+        <div className="flex flex-col">
+          <label htmlFor="cnh_cliente" className="text-portoGray font-medium">CNH</label>
+          <input type="text" id="cnh_cliente" {...register("cnh_cliente")}
+          className="border border-gray-300 rounded-md p-2 text-lg focus:border-portoBlue focus:outline-none" />
+          {errors.cnh_cliente && <span className="text-red-500">{errors.cnh_cliente.message?.toString()}</span>}
+        </div>
+
+        {/* Data de Nascimento */}
+        <div className="flex flex-col">
+          <label htmlFor="dt_nasc_cliente" className="text-portoGray font-medium">Data de Nascimento</label>
+          <input type="date" id="dt_nasc_cliente" {...register("dt_nasc_cliente")}
+          className="border border-gray-300 rounded-md p-2 text-lg focus:border-portoBlue focus:outline-none" />
+          {errors.dt_nasc_cliente && <span className="text-red-500">{errors.dt_nasc_cliente.message?.toString()}</span>}
+        </div>
+
+        {/* Notificações por E-mail */}
+        <div className="flex flex-col">
+          <label className="text-portoGray font-medium">Notificações por E-mail</label>
+          <select {...register("notificacoes_email")}
+          className="border border-gray-300 rounded-md p-2 text-lg focus:border-portoBlue focus:outline-none">
+            <option value="">Selecione</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+          </select>
+          {errors.notificacoes_email && <span className="text-red-500">{errors.notificacoes_email.message?.toString()}</span>}
+        </div>
+
+        {/* Notificações por Mensagem */}
+        <div className="flex flex-col">
+          <label className="text-portoGray font-medium">Notificações por Mensagem</label>
+          <select {...register("notificacoes_mensagem")}
+          className="border border-gray-300 rounded-md p-2 text-lg focus:border-portoBlue focus:outline-none">
+            <option value="">Selecione</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+          </select>
+          {errors.notificacoes_mensagem && <span className="text-red-500">{errors.notificacoes_mensagem.message?.toString()}</span>}
+        </div>
+
+        {/* Botão de envio */}
+        <button type="submit" className="w-full bg-portoBlue text-white font-bold p-3 rounded-md hover:bg-portoDarkBlue focus:outline-none">
+          Salvar
+        </button>
+      </form>
+    </main>
   );
 }
