@@ -6,9 +6,13 @@ import { FaBars, FaXmark } from 'react-icons/fa6'
 import OffcanvasLayout from '@/components/headless-ui/OffcanvasLayout'
 import PopoverLayout from '@/components/headless-ui/PopoverLayout'
 import useToggle from '@/hooks/useToggle'
-import logoDark from '../../../public/assets/img/AutoFixDark.png'
-import logoLight from '../../../public/assets/img/AutoFixLight.png'
-import avatar8 from '../../../public/assets/img/avatars/img-8.jpg'
+
+//images
+import logoDark from '@/assets/images/logo-dark.png'
+import logoLight from '@/assets/images/logo-light.png'
+import avatar8 from '@/assets//images/avatars/img-8.jpg'
+
+//icons
 import {
   AddUserSvg,
   ChatCheckSvg,

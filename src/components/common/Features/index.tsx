@@ -3,8 +3,10 @@ import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { FaArrowRight, FaCheck } from 'react-icons/fa6'
 const FeaturesAccordions = dynamic(() => import('./FeaturesAccordions'))
-import sass1 from '../../../../public/assets/img/hero/saas1.jpg'
-import sass2 from '../../../../public/assets/img/hero/saas2.jpg'
+
+//images
+import sass1 from '@/assets/images/hero/saas1.jpg'
+import sass2 from '@/assets/images/hero/saas2.jpg'
 
 const Features = () => {
   const checkIcon = <FaCheck color="#22C55E" size={20} />

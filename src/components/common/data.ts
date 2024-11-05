@@ -1,7 +1,9 @@
 import { StaticImageData } from 'next/image'
 import { PlanItem, PricingCard } from './types'
-import avatar1 from '../../../public/assets/img/avatars/img-1.jpg'
-import avatar2 from '../../../public/assets/img/avatars/img-2.jpg'
+
+//images
+import avatar1 from '@/assets/images/avatars/img-1.jpg'
+import avatar2 from '@/assets/images/avatars/img-2.jpg'
 
 type Testimonials = {
   name: string

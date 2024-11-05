@@ -1,8 +1,7 @@
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation'
 
 const useQuery = (): URLSearchParams => {
-  const searchParams = useSearchParams();
-  return new URLSearchParams(searchParams.toString());
+  return new URLSearchParams(useSearchParams())
 }
 
-export default useQuery;
+export default useQuery

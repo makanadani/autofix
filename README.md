@@ -1,39 +1,36 @@
-**AutoFix**
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-**AutoFix** é uma proposta de plataforma que utiliza inteligência artificial e automação para oferecer uma experiência únical no setor de reparação automotiva. O sistema permite que segurados da Porto Seguro Auto realizem diagnósticos de veículos, agendem serviços, comprem peças e efetuem pagamentos de forma totalmente digital.
+## Getting Started
 
-**OBJETIVOS**
-- Fornecer diagnóstico automatizado e preciso do veículo.
-- Facilitar o agendamento online de serviços de reparo.
-- Permitir a compra de peças automotivas de forma simples e segura.
-- Oferecer um sistema de pagamento integrado e seguro.
-- Garantir autenticação de usuários segura e confiável.
-- Proporcionar uma interface de usuário otimizada e responsiva.
-- Coletar feedbacks para aprimoramento contínuo do sistema.
+First, run the development server:
 
-**FUNCIONALIDADES**
-- Diagnóstico Inteligente: Chatbot interativo que coleta informações sobre o veículo e usa IA para sugerir diagnósticos.
-- Agendamento Online: Permite que os clientes escolham data e horário para serviços nas oficinas credenciadas.
-- Pagamento Seguro: Processamento de pagamento online para serviços e peças.
-- Autenticação de Usuários: Sistema de login, cadastro e recuperação de senha para segurados Porto.
-- Relatórios e Feedback: Resumo do serviço realizado e coleta de feedback para melhorias contínuas.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-**FRONT-END**
-- React e Next.js
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**BACK-END**
-- Java (Spring Boot): API RESTful e Maven
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-**INTELIGÊNCIA ARTIFICIAL**
-- Jupyter Notebooks: Desenvolvimento de lógica e ajuste do modelo de ML em Python
-- Chatbot: IBM Watson Assistant
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-**BANCO DE DADOS**
-- Oracle SQL Data Modeler: Implementação do banco de dados no backend Java
+## Learn More
 
-**MODELO DE NEGÓCIOS**
-- Metodologia Ágil: SCRUM
+To learn more about Next.js, take a look at the following resources:
 
-**LICENÇA:** Este projeto foi desenvolvido para fins acadêmicos e segue as diretrizes da instituição.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-**AVISO LEGAL:** Este projeto é um protótipo acadêmico desenvolvido por uma estudante da FIAP como parte de um exercício de aprendizado, sem qualquer relação com a Porto Seguro S.A. ou suas subsidiárias. O projeto não será utilizado pela Porto Seguro e não é afiliado à empresa de nenhuma forma.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

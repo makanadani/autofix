@@ -4,12 +4,16 @@ import { Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Image, { StaticImageData } from 'next/image'
 import { FaQuoteLeft } from 'react-icons/fa6'
-import avatar1 from '../../../public/assets/img/avatars/img-1.jpg'
-import avatar2 from '../../../public/assets/img/avatars/img-2.jpg'
-import avatar3 from '../../../public/assets/img/avatars/img-3.jpg'
-import google from '../../../public/assets/img/brands/google.svg'
-import amazon from '../../../public/assets/img/brands/amazon.svg'
-import lenovo from '../../../public/assets/img/brands/lenovo.svg'
+
+//images
+import avatar1 from '@/assets/images/avatars/img-1.jpg'
+import avatar2 from '@/assets/images/avatars/img-2.jpg'
+import avatar3 from '@/assets/images/avatars/img-3.jpg'
+
+import google from '@/assets/images/brands/google.svg'
+import amazon from '@/assets/images/brands/amazon.svg'
+import lenovo from '@/assets/images/brands/lenovo.svg'
+
 import 'swiper/css'
 import 'swiper/css/navigation'
 

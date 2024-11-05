@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { footerLinks } from './data'
-import logoDark from '../../../public/assets/img/AutoFixDark.png'
+
+//images
+import logoDark from '@/assets/images/logo-dark.png'
 
 const Footer3 = () => {
   return (

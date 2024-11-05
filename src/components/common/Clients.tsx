@@ -1,10 +1,12 @@
 import Image from 'next/image'
-import amazon from '../../../public/assets/img/brands/amazon.svg'
-import google from '../../../public/assets/img/brands/google.svg'
-import paypal from '../../../public/assets/img/brands/paypal.svg'
-import spotify from '../../../public/assets/img/brands/spotify.svg'
-import shopify from '../../../public/assets/img/brands/shopify.svg'
-import whiteWave from '../../../public/assets/img/shapes/white-wave.svg'
+
+//images
+import amazon from '@/assets/images/brands/amazon.svg'
+import google from '@/assets/images/brands/google.svg'
+import paypal from '@/assets/images/brands/paypal.svg'
+import spotify from '@/assets/images/brands/spotify.svg'
+import shopify from '@/assets/images/brands/shopify.svg'
+import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const brands = [amazon, google, paypal, spotify, shopify]
 const Clients = () => {
@@ -25,7 +27,7 @@ const Clients = () => {
           <div className="container" data-aos="fade-up" data-aos-duration="300">
             <div className="text-center">
               <span className="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">
-                Clientes
+                Clients
               </span>
               <h1 className="text-3xl/tight font-medium mt-3 mb-4">
                 The smart people management you need

@@ -1,6 +1,16 @@
+/*
+Version: 1.0
+Author: coderthemes
+Email: support@coderthemes.com
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap'); */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @import '../../node_modules/aos/dist/aos.css'; */
 
 .filter-options li a {
   @apply text-gray-700 px-4 py-1.5 rounded border border-gray-300 flex items-center justify-center text-sm transition-all duration-500;
@@ -66,7 +76,7 @@
     left: 5%;
     width: 7rem;
     height: 7rem;
-    background: url('../../public/assets/img/shapes/rounded-bottom.svg');
+    background: url('../assets/images/shapes/rounded-square2.svg');
     animation: rotating alternate ease-in-out infinite 6s;
   }
 
@@ -76,7 +86,7 @@
     right: 10%;
     width: 7rem;
     height: 7rem;
-    background: url('../../public/assets/img/shapes/rounded-square2.svg');
+    background: url('../assets/images/shapes/rounded-square2.svg');
     animation: rotating2 alternate ease-in-out infinite 6s;
   }
 
@@ -86,14 +96,16 @@
     right: 65%;
     width: 7rem;
     height: 7rem;
-    background: url('../../public/assets/img/shapes/rounded-square2.svg');
+    background: url('../assets/images/shapes/rounded-square2.svg');
     animation: rotating3 alternate ease-in-out infinite 6s;
   }
 }
 
+
 button[data-headlessui-state] {
   outline: transparent;
 }
+
 
 .logo-light {
   @apply hidden;
@@ -186,9 +198,12 @@ Navbar header {
   }
 }
 
+
+
 html {
   @apply relative scroll-smooth;
 }
+
 
 body {
   font-size: 15px;
@@ -201,6 +216,7 @@ body {
     cursor: pointer;
   }
 }
+
 
 input,
 textarea,
@@ -223,6 +239,7 @@ h6 {
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
+
 
 :root {
   &:is([data-mode="dark"]) {

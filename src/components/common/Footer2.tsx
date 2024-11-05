@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { footerLinks } from './data'
-import logoDark from '../../../public/assets/img/AutoFixDark.png'
+
+//image
+import logoDark from '@/assets/images/logo-dark.png'
 
 const Footer2 = ({ socialIcon }: { socialIcon?: boolean }) => {
   return (

@@ -9,9 +9,15 @@ import React, {
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FaChevronDown } from 'react-icons/fa6'
+
 import { findAllParent, findMenuItem, getMenuItemFromURL } from '@/helpers/menu'
+import { PopoverLayout } from '../headless-ui'
 import { cn } from '@/helpers'
+
+// constants
 import { MenuItemTypes } from '@/constants'
+
+// helpers
 
 type SubMenus = {
   item: MenuItemTypes
@@ -21,6 +27,13 @@ type SubMenus = {
   toggleMenu?: (item: any, status: boolean) => void
   className?: string,
   level: number
+}
+
+type PopoverToggleProps = {
+  activeMenuItems: string[] | undefined
+  open: boolean
+  toggleMenuItem: () => void
+  item: MenuItemTypes
 }
 
 const MenuItemWithChildren = ({
@@ -121,6 +134,9 @@ const MenuItemLink = ({ item, className }: SubMenus) => {
   )
 }
 
+/**
+ * Renders the application menu
+ */
 type AppMenuProps = {
   menuItems: MenuItemTypes[]
 }
@@ -140,6 +156,9 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
     }
   }
 
+  /**
+   * activate the menuitems
+   */
   const activeMenu = useCallback(() => {
     const trimmedURL = location?.replaceAll('', '')
     const matchingMenuItem = getMenuItemFromURL(menuItems, trimmedURL)

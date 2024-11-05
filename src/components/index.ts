@@ -5,4 +5,4 @@ export * from './form'
 export * from './layout'
 
 export { default as ScrollToTop } from './ScrollToTop'
-export { default as AuthPageLayout } from '../app/pages/auth/layout'
+export { default as AuthPageLayout } from '../app/auth/layout'

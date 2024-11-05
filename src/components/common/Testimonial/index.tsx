@@ -2,7 +2,9 @@ import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6'
 const TestimonialSwiper = dynamic(() => import('./TestimonialSwiper'))
-import whiteWave from '../../../../public/assets/img/favicon.png'
+
+// images
+import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const Testimonial = () => {
   return (

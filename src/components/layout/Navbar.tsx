@@ -7,29 +7,32 @@ import { OffcanvasLayout } from '@/components'
 import AppMenu from './Menu'
 import VerticalMenu from './VerticalMenu'
 import { useToggle } from '@/hooks'
-import logoDark from '../../../public/assets/img/AutoFixDark.png'
+
+//images
+import logoDark from '@/assets/images/logo-dark.png'
 import { FaBars, FaXmark } from 'react-icons/fa6'
 
 const Navbar = () => {
-  const [isOpenOffcanvas, toggleOffcanvas, _openOffcanvas, closeOffcanvas] = useToggle()
+  const [isOpenOffcanvas, toggleOffcanvas, _openOffcanvas, closeOffcanvas] =
+    useToggle()
+
   const navbarRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleScroll = () => {
+    document.addEventListener('scroll', (e) => {
+      e.preventDefault()
       if (navbarRef.current) {
-        if (window.scrollY >= 80) {
+        if (window.scrollY >= 80)
           navbarRef.current.classList.add('bg-white', 'shadow', 'lg:bg-white')
-        } else {
-          navbarRef.current.classList.remove('bg-white', 'shadow', 'lg:bg-white')
-        }
+        else
+          navbarRef.current.classList.remove(
+            'bg-white',
+            'shadow',
+            'lg:bg-white'
+          )
       }
-    }
-
-    document.addEventListener('scroll', handleScroll)
-    return () => {
-      document.removeEventListener('scroll', handleScroll)
-    }
-  }, [navbarRef])
+    })
+  }, [])
 
   return (
     <>

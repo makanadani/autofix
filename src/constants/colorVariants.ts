@@ -7,12 +7,19 @@ const colorVariants = [
   'info',
   'light',
   'dark',
-] as const;
+]
 
 const extendedColorVariants = [
-  ...colorVariants,
+  'primary',
+  'secondary',
+  'success',
+  'danger',
+  'warning',
+  'info',
+  'light',
+  'dark',
   'pink',
   'purple',
-] as const;
+]
 
-export { colorVariants, extendedColorVariants };
+export { colorVariants, extendedColorVariants }
